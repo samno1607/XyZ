@@ -1636,11 +1636,11 @@ config MSM_CPU_FREQ_MIN
 	depends on MSM_CPU_FREQ_SET_MIN_MAX
 	default 245760
 
-config CPU_VOLTAGE_TABLE
-	bool "Enable CPU Voltage Table via sysfs for adjustements"
-	default n
+config OC_ULTIMATE
+	bool "Allow Epic OC Option"
+	default y
 	help
-	  Krait User Votlage Control
+	  Unlock The Epic Overclock Freq Speed @ 2.054 GHz
 
 endif # CPU_FREQ_MSM
 
@@ -2828,3 +2828,4 @@ config MSM_CPU_PWRCTL
 	  ensures that they are always off.
 
 endif
+
