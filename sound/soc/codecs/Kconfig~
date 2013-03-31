@@ -236,13 +236,6 @@ config SND_SOC_SGTL5000
 	tristate
 
 config SND_SOC_SIGMADSP
-
-
-config SOUND_CONTROL_HAX_GPL
-	tristate "wcd93xx sound control hax"
-	default y
-	help
-	  FauxSound WCD93xx chipset sound control hacks
 	tristate
 	select CRC32
 
