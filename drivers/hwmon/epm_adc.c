@@ -524,10 +524,10 @@ static int epm_adc_ads_scale_result(struct epm_adc_drv *epm_adc,
 	int64_t *adc_scaled_data = 0;
 
 	/* Get the channel number */
-	channel_num = (adc_raw_data[0] & EPM_ADC_ADS_CHANNEL_DATA_CHID);
+	channel_num = adc_raw_data[0] & EPM_ADC_ADS_CHANNEL_DATA_CHID;
 	sign_bit    = 1;
 	/* This is the 16-bit raw data */
-	*adc_scaled_data = ((adc_raw_data[1] << 8) | adc_raw_data[2]);
+	*adc_scaled_data = adc_raw_data[1] << 8 | adc_raw_data[2];
 	/* Obtain the internal system reading */
 	if (channel_num == EPM_ADC_ADS_CHANNEL_VCC) {
 		*adc_scaled_data *= EPM_ADC_SCALE_MILLI;
